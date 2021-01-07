@@ -1,26 +1,61 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Cell from './components/Cell';
 
-function App() {
-  return (
+const possibilities: string[] = [
+    '"Du er på mute"',
+    'Møte blir forstyrret av et familiemedlem eller kjæledyr',
+    '"Hvis alle kan følge meg"',
+    'IAAS, PAAS eller SAAS nevnes',
+    'Video fryser',
+    'Møtedeltaker tar slurk av kaffekopp',
+    'Lyd hakker',
+    'Order "frontend" nevnes',
+    '"skateboard"',
+    'Vi hører ekko',
+    'Ordet "konsept" nevnes',
+    '"Jeg må løpe videre"',
+    'G R A T I S',
+    'anskaffelser.no nevnes',
+    '"veikart"',
+    '"produsent" eller "leverandør" nevnes',
+    '"prioritering"',
+    'Noen må bytte hodetelefoner',
+    'Ordet "backend" nevnes',
+    '"veiledning"',
+    '"Kan dere høre meg?"',
+    '"La meg dele skjerm"',
+    'Ordet "laboratorisk" nevnes',
+    'Barn som bråker',
+    'Demospøkelse slår til',
+    'Noen snakker i munnen på hverandre',
+    '"Har du hånda oppe eller har du glemt å ta den ned?"',
+    'Møtedeltaker rekker opp hånda',
+    '"Kan alle se skjermen min?"',
+    'Møtedeltaker deler feil skjerm',
+    'Møtedeltaker blir bustet i å ikke følge med',
+    '"<navn>, kan du mute?"',
+    '"brukertest"',
+];
+
+const createBoard = (): JSX.Element[] => {
+  const board: string[] = [];
+  for (let i = 0; i < 25; i++) {
+    let candidate = possibilities[randomIndex()];
+    while(board.includes(candidate)) {
+      candidate = possibilities[randomIndex()];
+    }
+    board.push(candidate);
+  }
+  return board.map(c => <Cell key={c} marked={false} text={c}/>)
+};
+
+const randomIndex = (): number => Math.floor(Math.random() * Math.floor(25));
+
+const App = () => (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {createBoard()}
     </div>
-  );
-}
+);
 
 export default App;

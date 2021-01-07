@@ -1,0 +1,24 @@
+.Cell {
+  background: #f7f7f7;
+  color: #012a4c;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  font-family: Source Sans Pro, sans-serif;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.marked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 8px solid #012a4c;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
