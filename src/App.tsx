@@ -36,6 +36,8 @@ const possibilities: string[] = [
     'Møtedeltaker blir bustet i å ikke følge med',
     '"<navn>, kan du mute?"',
     '"brukertest"',
+    'Det oppstår forvirring rundt begrep',
+    '"smidig utvikling"'
 ];
 
 const createBoard = (): JSX.Element[] => {
