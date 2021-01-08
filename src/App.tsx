@@ -4,7 +4,7 @@ import Cell from './components/Cell';
 
 const possibilities: string[] = [
     '"Du er på mute"',
-    'Møte blir forstyrret av et familiemedlem eller kjæledyr',
+    'Møtet blir forstyrret av et familiemedlem eller kjæledyr',
     '"Hvis alle kan følge meg"',
     'IAAS, PAAS eller SAAS nevnes',
     'Video fryser',
@@ -23,6 +23,7 @@ const possibilities: string[] = [
     'Noen må bytte hodetelefoner',
     'Ordet "backend" nevnes',
     '"veiledning"',
+    '"veiledningtekster"',
     '"Kan dere høre meg?"',
     '"La meg dele skjerm"',
     'Ordet "laboratorisk" nevnes',
@@ -33,11 +34,19 @@ const possibilities: string[] = [
     'Møtedeltaker rekker opp hånda',
     '"Kan alle se skjermen min?"',
     'Møtedeltaker deler feil skjerm',
-    'Møtedeltaker blir bustet i å ikke følge med',
+    'Møtedeltaker må lete etter riktig vindu',
+    'Møtedeltaker blir avslørt i å ikke følge med',
     '"<navn>, kan du mute?"',
     '"brukertest"',
     'Det oppstår forvirring rundt begrep',
-    '"smidig utvikling"'
+    '"smidig utvikling"',
+    '"dette var litt smått, kan du forstørre?"',
+    '"skytjenester" nevnes',
+    'Møtet blir forstyrret av høylydt tasting',
+    'Hører mobiltelefon i bakgrunnen',
+    '"ut i produksjon"',
+    'En møtedeltaker venter i lobbyen og må slippes inn',
+    'Noen fornorsker et engelsk ord'
 ];
 
 const createBoard = (): JSX.Element[] => {
