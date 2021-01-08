@@ -46,7 +46,10 @@ const possibilities: string[] = [
     'Hører mobiltelefon i bakgrunnen',
     '"ut i produksjon"',
     'En møtedeltaker venter i lobbyen og må slippes inn',
-    'Noen fornorsker et engelsk ord'
+    'Noen fornorsker et engelsk ord',
+    'Møtedeltaker avslører at hen sitter i undertøy',
+    'Familiemedlem/dyr i bakgrunnen',
+    'Kone/Mann/elsker(inne) i slåbrokk'
 ];
 
 const createBoard = (): JSX.Element[] => {
